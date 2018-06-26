@@ -7,12 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-//import org.testng.Assert;
+import org.testng.Assert;
 
 public class Sample {
-	
-
-	//System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 	
 	WebDriver driver = new ChromeDriver();
 	public String getCurrentLink() {
@@ -39,7 +36,7 @@ public class Sample {
 		       WebElement child = driver.findElement(By.id("child"));
 		       driver.switchTo().frame(child);
 		       String EA = driver.findElement(By.id("answer")).getAttribute("class");
-		  //     driver.switchTo().frame("main");
+		       driver.switchTo().parentFrame();
 		       if(AA.equals(EA)) {
 			b = false;
 			}
