@@ -14,13 +14,13 @@ public class SampleTest{
 	@Test(priority = 1)
 	public void testGreenBox() {
 		tat.greenBox();
-		
+		Assert.assertTrue(tat.getCurrentLink().contains("basic/drag"));
 	}
 	
 	@Test(priority = 2)
 	public void testFrameDungeon() {
 		tat.frameDungeon();
-		Assert.assertTrue(tat.getCurrentLink().contains("basic/drag"));
+		Assert.assertTrue(tat.getCurrentLink().contains("frame/dungeon"));
 	}
 	
 	@Test(priority = 3)
